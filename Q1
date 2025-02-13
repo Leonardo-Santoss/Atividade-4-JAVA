@@ -1,0 +1,94 @@
+
+package com.mycompany.pessoa;
+
+
+public class Pessoa {
+
+  String nome;
+    int idade;
+    double peso, altura;
+    
+    public String getNome(){
+        return nome;
+    }
+    public void setNome(String nome){
+        this.nome = nome;
+    }
+    
+    public void setIdade(int idade){
+        this.idade = idade;
+    }
+    public int getIdade(){
+        return idade;
+    }
+    
+     public void setPeso(double peso){
+        this.peso = peso;
+    }
+    public double getPeso(){
+        return peso;
+    }
+    
+     public void setAltura(double altura){
+        this.altura = altura;
+    }
+    public double getAltura(){
+        return altura;
+    }
+    
+    
+    public int envelhecer(){
+        return idade++;
+    }
+    public double engordar(){
+        return peso++;
+    }
+    public double emagrecer(){
+        return peso--;
+    }
+    public double crescer(){
+        if(idade < 21){
+            return altura =(altura + 0.05);
+        }
+        return altura;
+    }
+   
+    public static void main(String[] args) {
+         Pessoa pessoa1  =  new Pessoa();
+         
+         pessoa1.setNome("Gabriel");
+         pessoa1.setAltura(1.8);
+         pessoa1.setIdade(18);
+         pessoa1.setPeso(67);
+         
+        
+        
+        System.out.println("O nome é:" + pessoa1.getNome());
+        System.out.println("A idade é:" + pessoa1.getIdade());
+        System.out.println("O peso é:" + pessoa1.getPeso());
+        System.out.println("A altura é:" + pessoa1.getAltura());
+        
+        pessoa1.envelhecer();
+        pessoa1.emagrecer();
+        
+        System.out.println("Depois de emagrecer e envelhecer");
+        
+        System.out.println("O nome é:" + pessoa1.getNome());
+        System.out.println("A idade é:" + pessoa1.getIdade());
+        System.out.println("O peso é:" + pessoa1.getPeso());
+        System.out.println("A altura é:" + pessoa1.getAltura());
+        
+        pessoa1.engordar();
+        pessoa1.crescer();
+        
+        System.out.println("Depois de engordar e crecerr");
+        
+        System.out.println("O nome é:" + pessoa1.getNome());
+        System.out.println("A idade é:" + pessoa1.getIdade());
+        System.out.println("O peso é:" + pessoa1.getPeso());
+        System.out.println("A altura é:" + pessoa1.getAltura());
+
+        
+        
+    }
+}
