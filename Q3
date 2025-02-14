@@ -1,0 +1,54 @@
+package com.mycompany.contacorrente;
+
+public class ContaCorrente {
+
+    int saldo, taxaJuros, porcentagem;
+    
+    public int AdicioneJuros(){
+        return porcentagem = ((saldo * taxaJuros)/100 );
+    }
+    public int ContaInvestimento(){
+        
+        System.out.println("Saldo da conta é: " + getSaldo());
+        System.out.println("Taxa de juros é: " + taxaJuros + "%");
+        
+        
+        System.out.println("Depois de taxa de juros  5 vezes aplicado\n");
+        for(int i = 0; i < 5; i++ ){
+        saldo = (saldo - (saldo * taxaJuros)/100);
+        }
+         System.out.println("Saldo da conta é: " + (saldo - (saldo * taxaJuros)/100));
+        
+        return(0);
+    }
+    
+    public int getTaxaJuros(){
+    return taxaJuros;
+    }
+    public void setTaxaJuros(int taxaJuros){
+    this.taxaJuros = taxaJuros;
+    }
+    
+    public int getSaldo(){
+    return saldo;
+    }
+    public void setSaldo(int saldo){
+    this.saldo = saldo;
+    }
+    
+    
+    
+    public static void main(String[] args) {
+     
+        ContaCorrente conta1 = new ContaCorrente();
+        
+        conta1.setTaxaJuros(10);
+        conta1.AdicioneJuros();
+        conta1.setSaldo(1000);
+        
+        
+        conta1.ContaInvestimento();
+        
+        
+    }
+}
