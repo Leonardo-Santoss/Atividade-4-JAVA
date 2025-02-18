@@ -1,13 +1,24 @@
-package com.nillbz.elevador.java;
+
 
 public class Elevador {
     int pessoasdr, capacidade;
 
     public int entrar(){
-        return pessoasdr = pessoasdr + 2;
+        
+        if (pessoasdr < capacidade){
+            return pessoasdr++;
+        }else{
+            System.out.println("Elevador esta cheio");
+        }
     }
+
     public int sair(){
-        return pessoasdr = pessoasdr - 4;
+        if (pessoasdr > 0){
+        return pessoasdr--;
+        }else{
+        System.out.println("Elevador esta vazio");
+        }
+        
     }
 
     public int getCapacidade(){
@@ -33,11 +44,11 @@ public class Elevador {
 
         elevador1.sair();
 
-        System.out.println("Depois de algumas pessoas sairem do elevador retaram " + elevador1.getPessoasDr()+ " pessoas." );
+        System.out.println("Depois de algumas pessoas sairem do elevador restaram " + elevador1.getPessoasDr()+ " pessoas." );
 
         elevador1.entrar();
 
-        System.out.println("Depois de algumas pessoas entrarem no elevador retaram " + elevador1.getPessoasDr() +" pessoas." );
+        System.out.println("Depois de algumas pessoas entrarem no elevador restaram " + elevador1.getPessoasDr() +" pessoas." );
 
     }
 }
