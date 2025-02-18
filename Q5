@@ -1,0 +1,43 @@
+package com.nillbz.elevador.java;
+
+public class Elevador {
+    int pessoasdr, capacidade;
+
+    public int entrar(){
+        return pessoasdr = pessoasdr + 2;
+    }
+    public int sair(){
+        return pessoasdr = pessoasdr - 4;
+    }
+
+    public int getCapacidade(){
+        return capacidade;
+    }
+    public int getPessoasDr(){
+        return pessoasdr;
+    }
+
+    public void setCapacidade(int capacidade){
+        this.capacidade = capacidade;
+    }
+    public void setPessoasDr(int pessoasdr){
+        this.pessoasdr = pessoasdr;
+    }
+
+    public static void main(String[] args) {
+        Elevador elevador1 = new Elevador();
+        elevador1.setCapacidade(12);
+        elevador1.setPessoasDr(10);
+        
+        System.out.println("O elevador tem a capacidade de: "+ elevador1.getCapacidade()+" pessoas. \nNo elevador ha: "+elevador1.getPessoasDr()+" pessoas dentro.");
+
+        elevador1.sair();
+
+        System.out.println("Depois de algumas pessoas sairem do elevador retaram " + elevador1.getPessoasDr()+ " pessoas." );
+
+        elevador1.entrar();
+
+        System.out.println("Depois de algumas pessoas entrarem no elevador retaram " + elevador1.getPessoasDr() +" pessoas." );
+
+    }
+}
