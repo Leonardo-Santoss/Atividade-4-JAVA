@@ -1,15 +1,15 @@
 package com.nillbz.carro.java;
 
 public class Carro {
-double gas, consumo;
+    double gas, consumo;
 
 public double Andar(){
-gas = gas - consumo ;
-gas = Math.round(gas * 10.0)/10.0;
-return(0);
+    gas = gas - consumo ;
+    gas = Math.round(gas * 10.0)/10.0;
+    return(0);
 }
 public double Abastecer(){
-return gas++;
+    return gas++;
 }
 
 public double getGas(){
